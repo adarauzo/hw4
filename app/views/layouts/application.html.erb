@@ -6,19 +6,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="/stylesheets/application.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
 
   <body>
-    <div>
+     <div>
       <%= flash["notice"] %>
     </div>
     <div>
       <a href="/">Home</a>
       <a href="/logout">Logout</a>
-      <a href="/login">Login</a>
-      <a href="/users/new">Signup</a>
-    </div>
+      <%= link_to "Login", new_session_path %> <%= link_to "Signup", new_user_path %>    </div>
 
     <%= yield %>
   </body>
