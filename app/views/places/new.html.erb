@@ -1,10 +1,10 @@
 <h1>New Place</h1>
 
 <form action="/places" method="post">
-  <p>
+  <div class="form-group">
     <label for="place_name_input">Name</label>
-    <input type="text" name="place[name]" id="place_name_input"> 
-  </p>
+    <input type="text" name="place[name]" id="place_name_input" class="form-control">
+  </div>
 
-  <button>Save</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>

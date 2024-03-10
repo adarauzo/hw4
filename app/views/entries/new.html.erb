@@ -1,28 +1,27 @@
 <h1>New Entry</h1>
 
-<form action="/entries" method="post" enctype="multipart/form-data"> 
+<form action="/entries" method="post" enctype="multipart/form-data">
   <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
 
-
-  <p>
+  <div class="form-group">
     <label for="entry_title_input">Title</label>
-    <input type="text" name="entry[title]" id="entry_title_input"> 
-  </p>
+    <input type="text" name="entry[title]" id="entry_title_input" class="form-control">
+  </div>
 
-  <p>
+  <div class="form-group">
     <label for="entry_description_input">Description</label>
-    <input type="text" name="entry[description]" id="entry_description_input">
-  </p>
+    <input type="text" name="entry[description]" id="entry_description_input" class="form-control">
+  </div>
 
-  <p>
+  <div class="form-group">
     <label for="entry_occurred_on_input">Occurred On</label>
-    <input type="date" name="entry[occurred_on]" id="entry_occurred_on_input">
-  </p>
+    <input type="date" name="entry[occurred_on]" id="entry_occurred_on_input" class="form-control">
+  </div>
 
-  <p>
+  <div class="form-group">
     <label for="entry_image_input">Image</label>
-    <input type="file" name="entry[image]" id="entry_image_input">
-  </p>
+    <input type="file" name="entry[image]" id="entry_image_input" class="form-control-file"> 
+  </div>
 
-  <button>Save</button>
+  <button type="submit" class="btn btn-primary">Save</button>
 </form>
