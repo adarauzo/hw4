@@ -1,11 +1,14 @@
 <h1><%= @place["name"] %></h1>
 
 <h2>My Entries</h2>
-<% for entry in @entries %>
-  <h3><%= entry["title"] %></h3>
-  <h4><%= entry["occurred_on"] %></h4>
-  <p><%= entry["description"] %></p>
-<% end %>
+  <% for entry in @entries %>
+      <h3><%= entry["title"] %></h3>
+      <h4><%= entry["occurred_on"] %></h4>
+      <p><%= entry["description"] %></p>
+      <% if entry.image.attached? %>
+          <%= image_tag entry.image %>
+      <% end %>
+  <% end %>
 
 <p>
   <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
